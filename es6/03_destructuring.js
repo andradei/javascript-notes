@@ -53,6 +53,7 @@
   var {titles: theTitles} = person
   console.log(theTitles) // {one: 'Pilot', two: 'Anti-hero'}
 
+  // Destructuring nested properties
   var {titles: {one: firstTitle, two: secondTitle}} = person
   console.log(firstTitle) // 'Pilot'
   console.log(secondTitle) // 'Anti-hero'

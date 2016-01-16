@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ES6 Imports</title>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+      // ES6 Import enabled by traceur. The final implementation should be able to work
+      // without specifying ".js" on the filepath.
+      //
+      // `joke` is a variable that is declared and assigned the `export default` from the file.
+      import joke from './02_2_module.js'
+
+      window.alert(joke())
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
