@@ -30,7 +30,6 @@
 
   // -------------------------------------------------------------------------------------------
   // Object destructuring:
-
   var person = {
     first: 'Han',
     last: 'Solo',
@@ -71,4 +70,22 @@
   // As long as the names match, the values are destructured. They become undefined otherwise.
   var result = doWork('test', {data1: 10, data2: false})
   console.log(result) // [10, false, undefined]
+
+  // -------------------------------------------------------------------------------------------
+  // Direct destructuring:
+  var heroClass = {title: 'Mage', points: 100}
+  displayPerson(heroClass)
+
+  function displayPerson (p) {
+    // The variables determine the object property and the variable themselves.
+    let {title, points} = p
+    console.log(title, points)
+  }
+
+  // -------------------------------------------------------------------------------------------
+  // Array destructuring:
+  var arr = [1, 2, 3, 4, 5]
+  // Skipping elements when destructuring.
+  var [one,,,, five] = arr
+  console.log(one, five)
 })()
